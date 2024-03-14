@@ -1,16 +1,17 @@
-let userWord = prompt('Inserisci una parola');
-let text = userWord.charAt(userWord.length - 1)
-// console.log(text, 'ultima lettera della parola utente')
-let oppositeWord = '';
+function palindrome(userWord) {    
+    userWord = prompt('Inserisci una parola');
+    let oppositeWord = '';
+    let message = '';
+    for (let i = userWord.length - 1; i >= 0; i--) {
+        oppositeWord += userWord[i]
+    }
+    if (userWord === oppositeWord) {
+        message = 'la parola è palindroma'        
+    } else {
+        message = 'la parola NON è palindroma'        
+    }
+    return message
+}
 
-for(let i = userWord.length - 1; i >= 0; i--){
-    // oppositeWord.push(userWord[i]);
-    // console.log(userWord[i])
-    oppositeWord += userWord[i]   
-}
-if(userWord === oppositeWord){
-    console.log('la parola è palindroma');
-}else{
-    console.log('la parola NON è palindroma')
-}
-// console.log(oppositeWord);
+let result = palindrome();
+console.log(result, "console log della funzione invocata")
