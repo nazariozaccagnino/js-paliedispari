@@ -1,12 +1,15 @@
 let userWord = prompt('Inserisci una parola');
-let text = userWord.charAt(userWord.length)
-console.log(text, 'prova')
+let text = userWord.charAt(userWord.length - 1)
+console.log(text, 'ultima lettera della parola utente')
 let oppositeWord = '';
+
 for(let i = userWord.length - 1; i >= 0; i--){
-    oppositeWord = i;
-    console
+    // oppositeWord.push(userWord[i]);
+    // console.log(userWord[i])
+    oppositeWord += userWord[i]
+    if( userWord === oppositeWord)
+        console.log('la parola è palindroma')
+    
     
    
-}
-
-console.log(wordToCompare)
+}console.log(oppositeWord);
