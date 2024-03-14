@@ -13,30 +13,20 @@ function sumOddOrEven(casualnumber) {
 } 
 
 let button = document.getElementById("button")
+
 button.addEventListener('click', function() {
-
-// let odd = document.getElementById("odd").value;//dispari
-// console.log(odd)
-// let even = document.getElementById("even").value;//pari
-// console.log(even)
-
 let choice = parseInt(document.getElementById("choice").value);
-
-// console.log(choice, 'pari o dispari');
 let userNumber = parseInt(document.getElementById("userNumber").value);
-document.getElementById('yournumber').innerHTML = userNumber;
-// console.log(userNumber, 'numero utente');
 let message = '';
-
 pcNumber = getRndInteger(1,5);
-document.getElementById('pcnumber').innerHTML = pcNumber;
-// console.log(pcNumber, 'numero pc casuale')
 result = sumOddOrEven(pcNumber + userNumber);
-// console.log(result, 'è pari?')
 
-//sezione messaggi
+
+//sezione DOM
 let oddeven = document.getElementById("choice").value;
 document.getElementById('odd-or-even').innerHTML = oddeven;
+document.getElementById('yournumber').innerHTML = userNumber;
+document.getElementById('pcnumber').innerHTML = pcNumber;
 document.getElementById('total').innerHTML = pcNumber + userNumber
 //
 
@@ -53,16 +43,6 @@ if(choice === 1 && result === true){
 document.getElementById('message').innerHTML = message
 })
 
-// if(choice === 1 && result % 2 === 0){
-//     message = `pari, hai vinto`
-//     console.log(message)
-// }if(choice === 2 && result % 2 != 0){
-//     message = `dispari, hai vinto`
-//     console.log(message)
-// }else{
-//     message = `Hai perso`
-// }
-// })
 
 
 
