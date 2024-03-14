@@ -19,18 +19,30 @@ console.log(pcNumber, 'numero pc casuale')
 result = pcNumber + userNumber;
 console.log(result, 'risultato della somma')
 
-if(choice === 1 && result % 2 === 0){
-    message = `pari, hai vinto`
-    console.log(message)
-}if(choice === 2 && result % 2 != 0){
-    message = `dispari, hai vinto`
-    console.log(message)
-}else{
-    message = `Hai perso`
-}
+
 })
 
+// if(choice === 1 && result % 2 === 0){
+//     message = `pari, hai vinto`
+//     console.log(message)
+// }if(choice === 2 && result % 2 != 0){
+//     message = `dispari, hai vinto`
+//     console.log(message)
+// }else{
+//     message = `Hai perso`
+// }
+// })
 
-
+function sumOddOrEven(casualnumber) {
+    let even    
+    if (casualnumber % 2===0){
+         even = true
+    } else{
+        even = false
+    }
+    return even
+} 
+let prova = sumOddOrEven(3)
+console.log(prova, 'funzioneee')
 
 
