@@ -1,5 +1,5 @@
 function palindrome(userWord) {    
-    userWord = prompt('Inserisci una parola');
+    // userWord = prompt('Inserisci una parola');
     let oppositeWord = '';
     let message = '';
     for (let i = userWord.length - 1; i >= 0; i--) {
@@ -13,5 +13,5 @@ function palindrome(userWord) {
     return message
 }
 
-let result = palindrome();
+let result = palindrome('osso');
 console.log(result, "console log della funzione invocata")
