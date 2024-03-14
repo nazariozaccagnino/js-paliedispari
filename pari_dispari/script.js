@@ -1,9 +1,6 @@
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-
-
-
 let button = document.getElementById("button")
 button.addEventListener('click', function() {
 
@@ -28,6 +25,8 @@ if(choice === 1 && result % 2 === 0){
 }if(choice === 2 && result % 2 != 0){
     message = `dispari, hai vinto`
     console.log(message)
+}else{
+    message = `Hai perso`
 }
 })
 
