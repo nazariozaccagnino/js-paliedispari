@@ -19,28 +19,38 @@ button.addEventListener('click', function() {
 // console.log(odd)
 // let even = document.getElementById("even").value;//pari
 // console.log(even)
+
 let choice = parseInt(document.getElementById("choice").value);
-console.log(choice, 'pari o dispari');
+
+// console.log(choice, 'pari o dispari');
 let userNumber = parseInt(document.getElementById("userNumber").value);
-console.log(userNumber, 'numero utente');
+document.getElementById('yournumber').innerHTML = userNumber;
+// console.log(userNumber, 'numero utente');
 let message = '';
 
 pcNumber = getRndInteger(1,5);
-console.log(pcNumber, 'numero pc casuale')
+document.getElementById('pcnumber').innerHTML = pcNumber;
+// console.log(pcNumber, 'numero pc casuale')
 result = sumOddOrEven(pcNumber + userNumber);
-console.log(result, 'è pari?')
+// console.log(result, 'è pari?')
+
+//sezione messaggi
+let oddeven = document.getElementById("choice").value;
+document.getElementById('odd-or-even').innerHTML = oddeven;
+document.getElementById('total').innerHTML = pcNumber + userNumber
+//
 
 if(choice === 1 && result === true){
     message = `Pari, hai vinto`
     console.log(message)
 } else if (choice === 2 && result === false){
-    message = `dispari, hai vinto`
+    message = `Dispari, hai vinto`
     console.log(message)
 } else{
     message = `Hai perso`
     console.log(message)
 }
-
+document.getElementById('message').innerHTML = message
 })
 
 // if(choice === 1 && result % 2 === 0){

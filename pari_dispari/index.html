@@ -11,13 +11,37 @@
 </head>
 <body>
     <div class="container">
-    <select class="form-select" id="choice">
-        <option selected>Seleziona pari o dispari</option>
-        <option value="1" id="even">Pari</option>
-        <option value="2" id="odd">Dispari</option>
-      </select>
-      <input type="number" class="form-control" id="userNumber" placeholder="Inserisci un numero da 1 a 5">
-      <button type="button" class="btn btn-success" id="button">Inizia</button>
+        <select class="form-select" id="choice">
+            <option selected>Seleziona pari o dispari</option>
+            <option value="1" id="even">1. Pari</option>
+            <option value="2" id="odd">2. Dispari</option>
+        </select>
+        <input type="number" class="form-control" id="userNumber" placeholder="Inserisci un numero da 1 a 5">
+        <button type="button" class="btn btn-success" id="button">Inizia</button>
+        
+        <div class="row my-4">
+            <div class="col text-center border border-black">
+                <div><h2>Hai scelto:</h2></div>
+                <div><h3 id="odd-or-even"></h3></div>
+            </div>
+            <div class="col text-center border border-black">
+                <div><h2>Il tuo numero è</h2></div>
+                <div><h3 id="yournumber"></h3></div>
+            </div>
+            <div class="col text-center border border-black">
+                <div><h2>Il numero del pc è</h2></div>
+                <div><h3 id="pcnumber"></h3></div>
+            </div>
+        </div>
+        <div class="row text-center my-4">
+            <div class="col text-danger border border-black">
+                <h2>Totale: <span id="total"></span></h2>
+            </div>
+            <div class="col border border-black">
+                <h1 id="message"></h1>
+            </div>
+            
+        </div>
     </div>
 
 
